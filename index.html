@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Junaid Ali · Senior Frontend Engineer</title>
+<meta name="description" content="Junaid Ali is a Senior Frontend Engineer with 6+ years building fast, reliable web products with React, Next.js, and TypeScript." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Junaid Ali · Senior Frontend Engineer" />
+<meta property="og:description" content="6+ years building fast, reliable web products with React, Next.js, and TypeScript. Built AI-driven products at Noctal." />
+<!-- After deploying, replace the domain below with your live URL for rich link previews -->
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Junaid Ali · Senior Frontend Engineer" />
+<meta name="twitter:description" content="6+ years building fast, reliable web products with React, Next.js, and TypeScript." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0c10'/><text x='50%25' y='50%25' dy='.35em' text-anchor='middle' font-family='Arial' font-size='38' font-weight='bold' fill='%235eead4'>J</text></svg>" />
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0c10;
+    --bg-2: #0f1218;
+    --card: #14181f;
+    --card-hover: #191e27;
+    --border: #232a35;
+    --text: #e7eaef;
+    --muted: #9aa4b2;
+    --faint: #8b95a4;
+    --accent: #5eead4;
+    --accent-2: #7c8cff;
+    --grad: linear-gradient(120deg, #5eead4, #7c8cff);
+    --maxw: 1080px;
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .accent { color: var(--accent); }
+  .grad-text {
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ambient glow */
+  .glow { position: fixed; border-radius: 50%; filter: blur(120px); opacity: 0.20; z-index: 0; pointer-events: none; }
+  .glow.a { width: 480px; height: 480px; background: #5eead4; top: -160px; right: -120px; }
+  .glow.b { width: 420px; height: 420px; background: #7c8cff; top: 420px; left: -180px; }
+
+  /* nav */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(10,12,16,0.72);
+    border-bottom: 1px solid var(--border);
+  }
+  nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; letter-spacing: -0.02em; font-size: 18px; }
+  .logo .dot { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 15px; border-radius: 8px; font-weight: 600; font-size: 13px; line-height: 1.2;
+    border: 1px solid var(--border); transition: all .2s; cursor: pointer;
+  }
+  .btn.primary { background: var(--grad); color: #06231f; border: none; }
+  .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(94,234,212,.25); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 26px; cursor: pointer; }
+
+  section { position: relative; z-index: 1; padding: 88px 0; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 13px; letter-spacing: .08em; margin-bottom: 14px; }
+  h2.title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .section-intro { color: var(--muted); max-width: 620px; margin-bottom: 44px; }
+
+  /* hero */
+  .hero { padding: 96px 0 72px; }
+  .hero .status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted);
+    border: 1px solid var(--border); background: var(--bg-2); padding: 6px 14px; border-radius: 999px; margin-bottom: 26px; }
+  .hero .status .live { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(94,234,212,.15); }
+  .hero .status .live::after {
+    content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: var(--accent); animation: livePulse 2s ease-out infinite;
+  }
+  @keyframes livePulse {
+    0% { transform: scale(1); opacity: .55; }
+    70% { transform: scale(3.2); opacity: 0; }
+    100% { transform: scale(3.2); opacity: 0; }
+  }
+  .hero h1 { font-size: clamp(30px, 8vw, 62px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800; margin-bottom: 20px; }
+  .hero .role-wrap { display: inline-block; }
+  .hero .role-wrap::after {
+    content: ''; display: inline-block; width: 3px; height: 0.92em; margin-left: 7px;
+    background: var(--accent); vertical-align: -0.08em; border-radius: 2px;
+    animation: caretBlink 1.05s steps(1) infinite;
+  }
+  @keyframes caretBlink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+  .hero .role { display: inline-block; white-space: nowrap; }
+  .hero .sub { font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); max-width: 640px; margin-bottom: 34px; }
+  .hero .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+  .hero .socials { display: flex; gap: 20px; }
+  .hero .socials a { color: var(--faint); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .hero .socials a:hover { color: var(--accent); }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 8px; }
+  .stat { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 22px; }
+  .stat .num { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+  .stat .lbl { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+  /* about */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+  .about p { color: var(--muted); margin-bottom: 16px; font-size: 16px; }
+  .about p strong { color: var(--text); font-weight: 600; }
+  .quick { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 24px; }
+  .quick h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--faint); margin-bottom: 16px; }
+  .quick .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .quick .row:last-child { border-bottom: none; }
+  .quick .row span:first-child { color: var(--muted); }
+
+  /* skills */
+  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .skill-card { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 24px; transition: border-color .2s, transform .2s; }
+  .skill-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .skill-card h3 { font-size: 15px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .skill-card h3 .ic { color: var(--accent); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 13px; padding: 6px 12px; border-radius: 8px; background: var(--bg-2); border: 1px solid var(--border); color: var(--muted); }
+
+  /* experience timeline */
+  .timeline { position: relative; }
+  .exp { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 26px 0; border-top: 1px solid var(--border); }
+  .exp:first-child { border-top: none; }
+  .exp .when { color: var(--faint); font-size: 13px; font-family: 'JetBrains Mono', monospace; padding-top: 4px; }
+  .exp h3 { font-size: 19px; font-weight: 700; }
+  .exp .co { color: var(--accent); font-size: 15px; margin-bottom: 10px; }
+  .exp ul { list-style: none; }
+  .exp li { color: var(--muted); font-size: 15px; padding-left: 20px; position: relative; margin-bottom: 6px; }
+  .exp li::before { content: "▸"; color: var(--accent-2); position: absolute; left: 0; }
+
+  /* projects */
+  .feature {
+    border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
+    background: linear-gradient(160deg, #14181f, #0f1218);
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; margin-bottom: 26px;
+  }
+  .feature .body { padding: 40px; }
+  .feature .tag { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: .06em; }
+  .feature h3 { font-size: 26px; font-weight: 800; margin: 12px 0; letter-spacing: -0.01em; }
+  .feature p { color: var(--muted); margin-bottom: 18px; }
+  .feature .metrics { display: flex; gap: 26px; margin: 22px 0; flex-wrap: wrap; }
+  .feature .metrics .m .n { font-size: 22px; font-weight: 800; }
+  .feature .metrics .m .t { font-size: 12px; color: var(--faint); }
+  .feature .visual {
+    position: relative; overflow: hidden; min-height: 260px;
+    background: #07090c;
+    display: flex; align-items: flex-end;
+    border-left: 1px solid var(--border);
+  }
+  .feature .visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .feature .visual .cap {
+    position: relative; z-index: 1; width: 100%; padding: 14px 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #dbe2ea;
+    background: linear-gradient(to top, rgba(10,12,16,.92), rgba(10,12,16,0));
+  }
+  .feature .visual .wm-fallback {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 46px; letter-spacing: -.02em; color: var(--accent);
+  }
+
+  .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .proj { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s, transform .2s; }
+  .proj:hover { border-color: var(--accent-2); transform: translateY(-3px); }
+  .proj .thumb { position: relative; height: 156px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .proj .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .proj .thumb .wm { font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px; letter-spacing: .04em; }
+  .proj .proj-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+  .proj .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-2); letter-spacing: .05em; }
+  .proj h3 { font-size: 18px; margin: 8px 0 8px; }
+  .proj p { color: var(--muted); font-size: 14px; margin-bottom: 14px; flex: 1; }
+  .proj .visit { margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--accent); }
+  .proj .visit:hover { text-decoration: underline; }
+
+  /* certs */
+  .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cert { border: 1px solid var(--border); background: var(--card); border-radius: 12px; padding: 18px 20px; display: flex; align-items: center; gap: 14px; }
+  .cert .badge { width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: var(--bg-2); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center; color: var(--accent); font-weight: 800; }
+  .cert .n { font-weight: 600; font-size: 15px; }
+  .cert .o { color: var(--faint); font-size: 13px; }
+  a.cert { transition: border-color .2s, transform .2s; }
+  a.cert:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .cert .verify { margin-left: auto; color: var(--accent); font-size: 12px; font-weight: 600; white-space: nowrap; }
+
+  /* contact */
+  .contact { text-align: center; }
+  .contact h2 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .contact p { color: var(--muted); max-width: 520px; margin: 0 auto 32px; }
+  .contact .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  footer { border-top: 1px solid var(--border); padding: 30px 0; text-align: center; color: var(--faint); font-size: 13px; }
+
+  /* reveal animation */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 860px) {
+    .about-grid, .feature { grid-template-columns: 1fr; }
+    .feature .visual { border-left: none; border-top: 1px solid var(--border); }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .exp { grid-template-columns: 1fr; gap: 8px; }
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
+      display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0;
+      background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 20px 24px; gap: 18px;
+    }
+  }
+  @media (max-width: 560px) {
+    .skills-grid, .proj-grid, .cert-grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; }
+    .hero .status .live::after { animation: none; }
+    .hero .role-wrap::after { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="glow a"></div>
+<div class="glow b"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="logo">Junaid Ali<span class="dot">.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn ghost">Contact</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="status reveal"><span class="live"></span> Open to Senior / Lead Frontend roles</div>
+      <h1 class="reveal">Senior<br /><span class="role-wrap"><span class="role grad-text" id="role">Frontend Engineer</span></span></h1>
+      <p class="sub reveal">I build fast, reliable web products with React, Next.js, and TypeScript, and ship AI-driven features that people actually use. 6+ years across FinTech, gaming, and AI platforms.</p>
+      <div class="cta reveal">
+        <a href="#projects" class="btn primary">View my work →</a>
+        <a href="#contact" class="btn ghost">Get in touch</a>
+      </div>
+      <div class="socials reveal">
+        <a href="mailto:mjunaidali98@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/junaid-aly/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/mjunaidali98" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow reveal">01 / About</div>
+      <h2 class="title reveal">Frontend engineering, with AI at the core</h2>
+      <div class="about-grid">
+        <div class="about reveal">
+          <p>I'm a Senior Frontend Engineer based in Islamabad with more than six years building production web applications. Most of that has been in the modern JavaScript ecosystem, especially <strong>React, Next.js, and TypeScript</strong>, with a focus on turning complex backend services and APIs into interfaces people enjoy using.</p>
+          <p>Most recently I built two AI-driven products from the ground up at Noctal, owning the frontend end to end from architecture through launch. Before that I led a frontend team, set the standards for code quality and testing, and mentored other developers.</p>
+          <p>I work <strong>AI-first</strong> day to day, using tools like Claude and Cursor and integrating MCP-based agents into products, accelerating delivery while staying accountable for everything I ship.</p>
+        </div>
+        <div class="quick reveal">
+          <h3>Quick facts</h3>
+          <div class="row"><span>Location</span><span>Islamabad, PK</span></div>
+          <div class="row"><span>Experience</span><span>6+ years</span></div>
+          <div class="row"><span>Focus</span><span>React / Next.js</span></div>
+          <div class="row"><span>Also</span><span>Vue, TypeScript</span></div>
+          <div class="row"><span>Education</span><span>B.S. Computer Science</span></div>
+          <div class="row"><span>Work type</span><span>Remote</span></div>
+          <div class="row"><span>Availability</span><span>Full-time · 40 hrs/wk</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow reveal">02 / Skills</div>
+      <h2 class="title reveal">The toolkit</h2>
+      <p class="section-intro reveal">A deep core in the React ecosystem, plus the surrounding craft that makes products fast, accessible, and maintainable.</p>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3><span class="ic">◆</span> Languages &amp; Core</h3>
+          <div class="chips"><span class="chip">JavaScript (ES6+)</span><span class="chip">TypeScript</span><span class="chip">HTML5</span><span class="chip">CSS3</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">◆</span> Frameworks</h3>
+          <div class="chips"><span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">Vue.js</span><span class="chip">Svelte</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">◆</span> Styling &amp; State</h3>
+          <div class="chips"><span class="chip">Tailwind CSS</span><span class="chip">Styled Components</span><span class="chip">SASS/SCSS</span><span class="chip">Redux Toolkit</span><span class="chip">Zustand</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">◆</span> Data &amp; APIs</h3>
+          <div class="chips"><span class="chip">REST</span><span class="chip">GraphQL (AppSync)</span><span class="chip">Next.js API Routes</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">◆</span> Quality &amp; Tooling</h3>
+          <div class="chips"><span class="chip">Jest</span><span class="chip">React Testing Library</span><span class="chip">Playwright</span><span class="chip">Webpack</span><span class="chip">Git</span><span class="chip">CI/CD</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">◆</span> AI-First Development</h3>
+          <div class="chips"><span class="chip">Claude</span><span class="chip">Cursor</span><span class="chip">MCP agents</span><span class="chip">LLM feature integration</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="eyebrow reveal">03 / Experience</div>
+      <h2 class="title reveal">Where I've worked</h2>
+      <div class="timeline">
+        <div class="exp reveal">
+          <div class="when">Dec 2025 - Present</div>
+          <div>
+            <h3>Senior Frontend Engineer</h3>
+            <div class="co">Noctal · Remote</div>
+            <ul>
+              <li>Built two AI-driven products from scratch, owning the frontend from the ground up in React, Next.js, and TypeScript.</li>
+              <li>Integrated AI directly into the product, including MCP-based agents.</li>
+              <li>Lead code reviews, mentor engineers, and resolve performance bottlenecks.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp reveal">
+          <div class="when">Sep 2024 - Nov 2025</div>
+          <div>
+            <h3>Web Development Team Lead</h3>
+            <div class="co">AlphaSquad · Islamabad</div>
+            <ul>
+              <li>Led a frontend team through Agile delivery, sprint planning, and roadmap management.</li>
+              <li>Owned client communication and set engineering standards for review, testing, and architecture.</li>
+              <li>Delivered scalable web apps for FinTech and competitive-gaming clients.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp reveal">
+          <div class="when">Jan 2021 - Aug 2024</div>
+          <div>
+            <h3>Frontend Developer</h3>
+            <div class="co">AlphaSquad · Islamabad</div>
+            <ul>
+              <li>Built complex, scalable frontend apps with React, Next.js, and TypeScript.</li>
+              <li>Focused on performance, accessibility (WCAG), and SEO for production apps.</li>
+              <li>Set up testing with Jest, RTL, and Playwright, and mentored junior developers.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp reveal">
+          <div class="when">Jun 2019 - Jan 2021</div>
+          <div>
+            <h3>React Developer</h3>
+            <div class="co">CodesFix · Bahawalpur</div>
+            <ul>
+              <li>Built reusable React components and translated Figma / Adobe XD designs into pixel-perfect layouts.</li>
+              <li>Integrated REST APIs and managed state with React hooks and the Context API.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow reveal">04 / Projects</div>
+      <h2 class="title reveal">Selected work</h2>
+      <p class="section-intro reveal">A few things I've built. More detail available on request.</p>
+
+      <div class="feature reveal">
+        <div class="body">
+          <div class="tag">FEATURED · NOCTAL</div>
+          <h3>Lana &amp; the Noctal App</h3>
+          <p>AI-powered sound design for filmmakers and video editors. Lana analyzes footage and places licensed, human-recorded sound effects onto the timeline, including a plugin for Adobe Premiere Pro. I built the frontend from the first commit: architecture, state, and the REST/GraphQL data layer.</p>
+          <div class="metrics">
+            <div class="m"><div class="n grad-text">3,500+</div><div class="t">users pre-launch</div></div>
+            <div class="m"><div class="n grad-text">1,500+</div><div class="t">via Lana plugin</div></div>
+            <div class="m"><div class="n grad-text">500+</div><div class="t">paid active users</div></div>
+          </div>
+          <div class="chips" style="margin-bottom:20px;"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">MCP agents</span></div>
+          <a href="https://noctal.xyz" target="_blank" rel="noopener" class="btn ghost">Marketing site →</a>
+          <a href="https://noctal.xyz/plugins/premiere" target="_blank" rel="noopener" class="btn ghost" style="margin-left:10px;">Premiere plugin →</a>
+        </div>
+        <div class="visual">
+          <div class="wm-fallback">Lana</div>
+          <img src="https://noctal.xyz/og.jpg" alt="Noctal Lana, real sounds synced to picture" loading="lazy" onerror="this.remove()" />
+          <div class="cap">Lana by Noctal · noctal.xyz</div>
+        </div>
+      </div>
+
+      <div class="proj-grid">
+        <div class="proj reveal">
+          <div class="thumb" style="background: linear-gradient(135deg, #241546, #0d0820);">
+            <img src="https://www.scrively.com/v2/assets/images/index-claude-2/hero-blue-eyes.webp" alt="Scrively" loading="lazy" onerror="this.remove()" />
+            <div class="wm" style="color:#b8a6ff;">Scrively</div>
+          </div>
+          <div class="proj-body">
+            <div class="tag">LEAD · AI STORYBOOK APP</div>
+            <h3>Scrively</h3>
+            <p>An AI storybook maker that turns a simple idea into a fully illustrated, personalized children's book in minutes, with 110+ art styles, one-click coloring-book mode, AI narration, and print-ready hardcovers. I led the frontend across the creation flow and reader.</p>
+            <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">AI features</span></div>
+            <a class="visit" href="https://www.scrively.com/" target="_blank" rel="noopener">Visit scrively.com →</a>
+          </div>
+        </div>
+        <div class="proj reveal">
+          <div class="thumb" style="background: linear-gradient(135deg, #1c1a08, #0c0b02);">
+            <img src="https://d34lk2pr0k31uk.cloudfront.net/static/images/lobby/hero-welcome-mobile-bg.677304f42945.png" alt="MonkeyTilt casino" loading="lazy" onerror="this.remove()" />
+            <div class="wm" style="color:#FCE503;">MonkeyTilt</div>
+          </div>
+          <div class="proj-body">
+            <div class="tag">FRONTEND LEAD · CASINO &amp; SPORTSBOOK</div>
+            <h3>MonkeyTilt</h3>
+            <p>A crypto casino and sportsbook platform serving 250,000+ players, with thousands of slots, live-dealer tables, game shows, and a full sportsbook sharing a single wallet. I led frontend development on the casino experience.</p>
+            <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Real-time UI</span><span class="chip">Crypto wallets</span></div>
+            <a class="visit" href="https://monkeytilt.com/casino/" target="_blank" rel="noopener">Visit monkeytilt.com →</a>
+          </div>
+        </div>
+        <div class="proj reveal">
+          <div class="thumb" style="background: linear-gradient(135deg, #0b3d2e, #06231a);">
+            <img src="https://www.piparena.com/_next/image?url=%2Fimages%2Fdashboard-optimized.webp&amp;w=1920&amp;q=75" alt="PIP Arena trading dashboard" loading="lazy" onerror="this.remove()" />
+            <div class="wm" style="color:#34d399;">PIP Arena</div>
+          </div>
+          <div class="proj-body">
+            <div class="tag">FRONTEND LEAD · TRADING GAME</div>
+            <h3>PIP Arena</h3>
+            <p>A gamified trading-competition platform where traders enter risk-free challenges, earn XP, climb global leaderboards, and win real prizes. I led the frontend, building the dashboards, competitions, and live leaderboards.</p>
+            <div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span></div>
+            <a class="visit" href="https://www.piparena.com/en" target="_blank" rel="noopener">Visit piparena.com →</a>
+          </div>
+        </div>
+        <div class="proj reveal">
+          <div class="thumb" style="background: linear-gradient(135deg, #12324f, #08131f);">
+            <img src="https://cdn.sanity.io/images/l3xzko5p/production/fc3dde81cfa751f2e6c52ee2d959317624c54b47-2918x2008.png?w=1200&amp;fm=webp&amp;q=75&amp;fit=clip" alt="Recap crypto tax dashboard" loading="lazy" onerror="this.remove()" />
+            <div class="wm" style="color:#6fb6ff;">Recap</div>
+          </div>
+          <div class="proj-body">
+            <div class="tag">FRONTEND DEVELOPER · CRYPTO TAX</div>
+            <h3>Recap</h3>
+            <p>UK-based, privacy-first crypto tax software trusted by 50,000+ investors. It imports transactions from 350+ exchanges and wallets, tracks a full crypto portfolio in real time, and generates HMRC-compliant capital-gains reports.</p>
+            <div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Fintech</span></div>
+            <a class="visit" href="https://recap.io/" target="_blank" rel="noopener">Visit recap.io →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs" style="padding-top:0;">
+    <div class="wrap">
+      <div class="eyebrow reveal">05 / Certifications</div>
+      <h2 class="title reveal">Credentials</h2>
+      <div class="cert-grid">
+        <a class="cert reveal" href="https://verify.skilljar.com/c/e5q87w7izbm6" target="_blank" rel="noopener"><div class="badge">C</div><div><div class="n">Claude 101</div><div class="o">Anthropic Education · 2026</div></div><span class="verify">Verify →</span></a>
+        <div class="cert reveal"><div class="badge">T</div><div><div class="n">Triplebyte Certified</div><div class="o">Triplebyte</div></div></div>
+        <a class="cert reveal" href="https://www.coursera.org/account/accomplishments/verify/PQRRGZVYGTFQ" target="_blank" rel="noopener"><div class="badge">R</div><div><div class="n">Front-End Web Development with React</div><div class="o">Coursera · HKUST</div></div><span class="verify">Verify →</span></a>
+        <a class="cert reveal" href="https://www.hackerrank.com/certificates/926dd72e61d4" target="_blank" rel="noopener"><div class="badge">JS</div><div><div class="n">JavaScript (Basic)</div><div class="o">HackerRank</div></div><span class="verify">Verify →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="eyebrow reveal" style="text-align:center;">06 / Contact</div>
+      <h2 class="reveal">Let's build something<br /><span class="grad-text">worth shipping.</span></h2>
+      <p class="reveal">Open to Senior and Lead Frontend roles, remote and full-time (40 hours a week). If you're working on something interesting, especially at the intersection of great UX and AI, I'd love to hear about it.</p>
+      <div class="cta reveal">
+        <a href="mailto:mjunaidali98@gmail.com" class="btn primary">mjunaidali98@gmail.com</a>
+        <a href="https://www.linkedin.com/in/junaid-aly/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
+        <a href="https://github.com/mjunaidali98" target="_blank" rel="noopener" class="btn ghost">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Junaid Ali · Built with care · Islamabad, Pakistan</div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // hero role: decode / scramble effect
+  (function () {
+    const el = document.getElementById('role');
+    if (!el) return;
+    const roles = ['Frontend Engineer', 'React Developer', 'Frontend Developer', 'Next.js Developer', 'JavaScript Developer'];
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789<>/[]{}*#+%';
+    let idx = 0, animating = false;
+    function scramble(next) {
+      animating = true;
+      const from = el.textContent;
+      const len = Math.max(from.length, next.length);
+      const plan = [];
+      for (let i = 0; i < len; i++) {
+        const start = Math.floor(Math.random() * 18);
+        const end = start + 12 + Math.floor(Math.random() * 18);
+        plan.push({ ch: next[i] || '', start, end });
+      }
+      let frame = 0;
+      (function tick() {
+        let out = '', done = 0;
+        for (const p of plan) {
+          if (frame >= p.end) { out += p.ch; done++; }
+          else if (frame >= p.start && p.ch) { out += glyphs[Math.floor(Math.random() * glyphs.length)]; }
+        }
+        el.textContent = out;
+        frame++;
+        if (done < plan.length) { requestAnimationFrame(tick); }
+        else { el.textContent = next; animating = false; }
+      })();
+    }
+    setInterval(() => { if (!animating) { idx = (idx + 1) % roles.length; scramble(roles[idx]); } }, 2900);
+  })();
+
+  // mobile menu
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (Math.min(i % 6, 5) * 60) + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
